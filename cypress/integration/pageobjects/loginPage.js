@@ -19,16 +19,9 @@ class LoginPage{
     }
 
     loginToCRM(userName,password){
-        getUserName().type(userName);
-        getPassword().type(password);
-        getLoginButton().click();
-        return getToastMessage().invoke('text')
-        .then((text)=>{
-          const toastText = text;
-          expect(toastText).to.equal(" Login Successfully ");
-          cy.url().should('include', '/my-home');
-          return toastText;
-        })
+        this.getUserName().type(userName);
+        this.getPassword().type(password);
+        this.getLoginButton().click();
     }
 }
 export default LoginPage;
