@@ -28,12 +28,9 @@ context('Actions', () => {
             cy.wrap(modules).should('contain.text',credentials.modules[index]);
         })
         homePage.getAllModules().each((modules,index)=>{
-            if(index==11||index==12){
-
-            }else{
                 cy.wrap(modules).click();
                 cy.url().should('include',"/"+credentials.modules[index].toLowerCase().replace(/\s/g, '-'));
-            } 
+            })
         })
-    })
+       
 })

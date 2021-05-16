@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/profNilesh/akm#readme",
   "devDependencies": {
-    "cypress": "^7.3.0"
+    "cypress": "^7.3.0",
+    "prettier": "2.3.0"
   }
 }
