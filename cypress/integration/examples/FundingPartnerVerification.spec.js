@@ -82,7 +82,7 @@ it('Edit funding partner', () => {
     editFundingPartnerPage.fundingPartnerPhone().clear().type(fundingPartner[1].phone);
     editFundingPartnerPage.fundingPartnerEmail().clear().type(fundingPartner[1].email);
     editFundingPartnerPage.fundingPartnerNotes().clear().type(fundingPartner[1].notes);
-    editFundingPartnerPage.fundingPartnerUpdateButton().screenshot('updated details').click();
+    editFundingPartnerPage.fundingPartnerUpdateButton().click();
     cy.screenshot('update screenshot');
     fundingPartnerPage.getFundingNameList().each((fund,index) => {
         var fundName=fund.text();
